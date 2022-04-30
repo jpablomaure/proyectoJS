@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda para comprar en Soy Bohemia">
+    <meta name="keywords" content="almohadon, fusta, perchero, vela, lampara">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Tienda</title>
+</head>
+
+<body>
+    <!-- INICIO menu navegacion -->
+
+    <nav class="navbar navbar-expand-sm navbar-light ">
+        <a class="navbar-brand" href="./index.html"> <img src="./img/logo.png" heigth="96px" width="170px"
+                alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="btn btn-sm btn-outline-secondary" href="#">HOME</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">NOSOTROS</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">TIENDA</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">SERVICIOS</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">CONTACTO</a>
+            </div>
+        </div>
+    </nav>
+    <!-- FIN menu navegacion -->
+    </header>
+    <main>
+        <!--  Inicio contenido principal -->
+        <div class="titulo">
+            <h1>TIENDA</h1>
+        </div>
+        <div><input type="text" id="buscarProducto">
+            <button onclick="buscarProducto()" id="botonBuscar">Buscar Producto</button>
+            <button onclick="generarCards(productos)" id="reset">Reset</button>
+        </div>
+        <form class="d-flex">
+            <button class="btn btn-outline-dark" type="button" onclick="location.href='detalle.html';">
+                <i class="bi-cart-fill me-1"></i>
+                Carrito
+                <span class="badge bg-dark text-white ms-1 rounded-pill" id="cantidad-prod">
+                    0
+                </span>
+            </button>
+        </form>
+        <div class="container">
+            <div class="row">
+                <section id="product" class="tienda ">
+
+                </section>
+                <!-- Fin contenido principal  -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Inicio menu redes sociales -->
+        <div class="redes">
+            <ul>
+                <li><a href="https://www.facebook.com/soybohemia26/" target="_blank"><img src="./img/FACE.png"
+                            alt="facebook"> Facebook </a></li>
+                <li><a href="https://www.instagram.com/soybohemia26/" target="_blank"><img src="./img/insta.png"
+                            alt="instagram"> Instagram</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5492615865087" target="_blank"><img
+                            src="../img/wts.png" alt="whatsapp"> whatsapp</a></li>
+                <li><a href="mailto:soybohemia26@gmail.com"><img src="../img/mail.png" alt="mail"> E-mail</a></li>
+            </ul>
+            <!-- fin menu redes sociales -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./script/tienda.js"></script>
+</body>
+
+</html>

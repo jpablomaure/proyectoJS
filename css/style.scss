@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Licorice&display=swap');
+
+//variables
+
+//colores y fuentes
+
+$color:(fondo: #A5A58D,
+    fondoMain: white,
+    contenedor: #B7B7A4,
+);
+
+$fondo: map-get($color, fondo);
+$fondoMain: map-get($color, fondoMain);
+$contenedor: map-get($color, contenedor);
+$fontPresentacion: 'Architects Daughter',
+cursive;
+
+@mixin pm($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: auto;
+}
+
+main {
+    background-color: $fondoMain;
+    border-top: 3px solid $fondo;
+}
+
+nav {
+    font-family: 'Architects Daughter', cursive;
+    background-color: #6b705c;
+}
+
+.btn {
+    color: #333;
+    border-color: 1px solid black;
+    background-color: #b7b7a4;
+    font-weight: bold;
+
+    &:hover {
+        color: #444;
+        background-color: #eaeaea;
+        animation: sobre 1.5s infinite;
+    }
+}
+
+@keyframes sobre {
+    0% {
+        transform: scale(.99);
+        box-shadow: 2px 2px 1px #222;
+    }
+
+    50% {
+        transform: scale(1.2);
+        box-shadow: 5px 5px 2px #222;
+    }
+
+    0% {
+        transform: scale(.99);
+        box-shadow: 2px 2px 1px #222;
+    }
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #6b705c;
+}
+
+/* INICIO MENU */
+
+#menu {
+    li>a {
+        &:hover {
+            color: #000;
+            background-color: #eaeaea;
+            animation: sobre 1.5s infinite;
+        }
+    }
+}
+
+@keyframes sobre {
+    0% {
+        transform: scale(.99);
+        box-shadow: 2px 2px 1px #222;
+    }
+
+    50% {
+        transform: scale(1.2);
+        box-shadow: 5px 5px 2px #222;
+    }
+
+    0% {
+        transform: scale(.99);
+        box-shadow: 2px 2px 1px #222;
+    }
+}
+
+.container {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $contenedor;
+    box-shadow: 5px 5px 5px;
+    width: 90%;
+}
+
+
+/* FIN MENU */
+
+/* INICION MENU REDES footer */
+
+.redes {
+    padding: 5px;
+
+    & li>a {
+        list-style: none;
+        text-decoration: none;
+        font-size: .8rem;
+        color: white;
+    }
+
+    & li {
+        display: inline;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    & img {
+        width: 25px;
+    }
+}
+
+/* FIN MENU REDES footer */
+
+/* CAJA PRESENTACION DE CONTENIDO */
+
+.presentacion {
+    margin: 30px;
+    padding: 15px;
+
+
+    & img {
+        width: 100%;
+    }
+}
+
+/* Presentacion de pagina nosotros  */
+.nosotrosPresentaMision h2 {
+    font-family: $fontPresentacion;
+}
+
+/* titulos de presentaciones */
+
+.titulo {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: bold;
+    text-align: center;
+
+    & p {
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    & h1 {
+        font-size: 2em;
+        background: linear-gradient(#6b705c, white);
+        @extend p;
+    }
+
+    & span {
+        font-size: 2em;
+        font-family: 'Barlow', sans-serif;
+        font-family: 'Licorice', cursive;
+    }
+
+}
+
+/* INICIA contenido de TU ESPACIO  */
+.introduccion {
+    @include pm(10px, 10px);
+}
+
+/* FINALIZA contenido de TU ESPACIO  */
+
+/* Formulario de contacto */
+#formulario {
+    margin: 10px;
+}
+
+
+.campos li,
+.interno {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include pm(10px, 10px);
+}
+
+.place {
+    padding: 8px;
+}
+
+.campos>li>label,
+.campos li p {
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.campos>li>label+*,
+.interno {
+    flex: 1 0 220px;
+}
+
+.botonesForm {
+    @include pm(10px, 10px);
+}
+
+/* INICIA CAJA PARA PUBLICIDAD */
+#publicidad {
+    border: 2px solid rgb(165, 156, 88);
+    border-radius: 10%;
+    width: auto;
+    max-width: 180px;
+    height: 300px;
+    margin: 10px;
+    text-align: center;
+    background: linear-gradient(#CB997E, #efdace);
+    box-shadow: 10px 10px 5px rgb(104, 104, 104);
+
+    & p {
+        padding: 4px;
+        text-align: center;
+        background: linear-gradient(navajowhite, white);
+        border-radius: 15%;
+        margin: 5px;
+    }
+}
+
+/* FINALIZA CAJA PARA PUBLICIDAD */
+
+/* INICIA TIENDA  */
+.tienda {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    gap: 10px;
+    @include pm(10px, 10px);
+}
+
+.producto {
+    width: 200px;
+    height: 250px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #F0EFEB;
+    text-align: center;
+    @include pm(10px, 10px);
+
+    & p {
+        background-color: $contenedor;
+    }
+
+    $productos: (prod1: 1,
+        prod2: 2,
+        prod3: 3,
+        prod4: 4,
+        prod5: 5,
+        prod6: 6,
+        prod7: 7,
+        prod8: 8,
+        prod9: 9,
+        prod10: 10,
+        prod11: 11,
+        prod12: 12,
+    );
+
+    @each $nroProd,
+    $valorProd in $productos {
+
+        & .producto--#{$nroProd} {
+            width: 150px;
+            height: 150px;
+            @include pm(10px, 10px);
+            box-shadow: 10px silver;
+            background-image: url(../img/tienda#{$valorProd}.jpg);
+        }
+
+        & .producto--#{$nroProd}:hover {
+            animation: mueve 1s infinite;
+        }
+    }
+}
+
+
+/* FINALIZA TIENDA  */
+
+
+/* INICIA SERVICIOS  */
+
+.contenedor {
+    display: grid;
+    grid-template-areas:
+        "servicio1 servicio1 servicio1"
+        "serv1 serv2 serv3"
+        "servicio2 servicio2 servicio2"
+        "serv4 serv5 serv6"
+        "servicio3 servicio3 servicio3"
+        "serv7 serv8 serv9";
+    grid-template-rows: 50px 190px 50px 190px 50px 190px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: auto;
+    height: auto;
+    grid-gap: 5px;
+    justify-content: center;
+    @include pm(30px, 30px);
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #B7B7A4;
+    box-shadow: 5px 5px 5px;
+}
+
+.servicio {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 150px;
+    @include pm(20px, 20px);
+}
+
+@for $i from 1 through 3 {
+    .servicio#{$i} {
+        grid-area: servicio#{$i};
+        background-color: $fondo;
+        // justify-content: center;
+        text-align: center;
+        line-height: center;
+    }
+
+}
+
+
+@for $i from 1 through 9 {
+    .serv#{$i} {
+        grid-area: serv#{$i};
+        background-image: url(../img/servicio#{$i}.jpg);
+        align-items: center;
+
+        &:hover {
+            animation: mueve 1s infinite;
+        }
+    }
+}
+
+@keyframes mueve {
+    0% {
+        transform: translate(5px);
+        transform: escale(.99);
+        box-shadow: -2px -2px 1px #222;
+        border: 1px solid black;
+    }
+
+    50% {
+        transform: translate(10px);
+        transform: escale(1.2);
+        box-shadow: -5px -5px 2px #222;
+        border: 2px solid black;
+    }
+
+    100% {
+        transform: translate(5px);
+        transform: escale(.99);
+        box-shadow: -2px -2px 1px #222;
+        border: 1px solid black;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .contenedor {
+        display: grid;
+        grid-template-areas:
+            "servicio1 servicio1"
+            "serv1 serv2"
+            "serv3 serv3"
+            "servicio2 servicio2"
+            "serv4 serv5"
+            "serv6 serv6"
+            "servicio3 servicio3"
+            "serv7 serv8"
+            "serv9 serv9";
+        grid-template-rows: 50px 190px 190px 50px 190px 190px 50px 190px 190px;
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        height: auto;
+        grid-gap: 5px;
+        @include pm(30px, 30px);
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: #B7B7A4;
+        box-shadow: 5px 5px 5px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .contenedor {
+        display: grid;
+        grid-template-areas:
+            "servicio1"
+            "serv1"
+            "serv2"
+            "serv3"
+            "servicio2"
+            "serv4"
+            "serv5"
+            "serv6"
+            "servicio3"
+            "serv7"
+            "serv8"
+            "serv9";
+        grid-template-rows: 70px 190px 190px 185px 50px 190px 190px 190px 50px 190px 190px 190px;
+        grid-template-columns: 1fr;
+        width: 85%;
+        height: auto;
+        grid-gap: 5px;
+        @include pm(30px, 30px);
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: #B7B7A4;
+        box-shadow: 5px 5px 5px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* FINALIZA SERVICIOS  */

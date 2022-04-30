@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comforter+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Licorice&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+}
+
+main {
+  background-color: white;
+  border-top: 3px solid #A5A58D;
+}
+
+nav {
+  font-family: "Architects Daughter", cursive;
+  background-color: #6b705c;
+}
+
+.btn {
+  color: #333;
+  border-color: 1px solid black;
+  background-color: #b7b7a4;
+  font-weight: bold;
+}
+.btn:hover {
+  color: #444;
+  background-color: #eaeaea;
+  animation: sobre 1.5s infinite;
+}
+
+@keyframes sobre {
+  0% {
+    transform: scale(0.99);
+    box-shadow: 2px 2px 1px #222;
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 5px 5px 2px #222;
+  }
+  0% {
+    transform: scale(0.99);
+    box-shadow: 2px 2px 1px #222;
+  }
+}
+footer {
+  margin-top: 20px;
+  background-color: #6b705c;
+}
+
+/* INICIO MENU */
+#menu li > a:hover {
+  color: #000;
+  background-color: #eaeaea;
+  animation: sobre 1.5s infinite;
+}
+
+@keyframes sobre {
+  0% {
+    transform: scale(0.99);
+    box-shadow: 2px 2px 1px #222;
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 5px 5px 2px #222;
+  }
+  0% {
+    transform: scale(0.99);
+    box-shadow: 2px 2px 1px #222;
+  }
+}
+.container {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #B7B7A4;
+  box-shadow: 5px 5px 5px;
+  width: 90%;
+}
+
+/* FIN MENU */
+/* INICION MENU REDES footer */
+.redes {
+  padding: 5px;
+}
+.redes li > a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: white;
+}
+.redes li {
+  display: inline;
+  text-align: center;
+  padding-right: 10px;
+}
+.redes img {
+  width: 25px;
+}
+
+/* FIN MENU REDES footer */
+/* CAJA PRESENTACION DE CONTENIDO */
+.presentacion {
+  margin: 30px;
+  padding: 15px;
+}
+.presentacion img {
+  width: 100%;
+}
+
+/* Presentacion de pagina nosotros  */
+.nosotrosPresentaMision h2 {
+  font-family: "Architects Daughter", cursive;
+}
+
+/* titulos de presentaciones */
+.titulo {
+  font-family: "Architects Daughter", cursive;
+  font-weight: bold;
+  text-align: center;
+}
+.titulo p, .titulo h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.titulo h1 {
+  font-size: 2em;
+  background: linear-gradient(#6b705c, white);
+}
+.titulo span {
+  font-size: 2em;
+  font-family: "Barlow", sans-serif;
+  font-family: "Licorice", cursive;
+}
+
+/* INICIA contenido de TU ESPACIO  */
+.introduccion {
+  padding: 10px;
+  margin: 10px;
+}
+
+/* FINALIZA contenido de TU ESPACIO  */
+/* Formulario de contacto */
+#formulario {
+  margin: 10px;
+}
+
+.campos li,
+.interno {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.place {
+  padding: 8px;
+}
+
+.campos > li > label,
+.campos li p,
+.campos li .titulo h1,
+.titulo .campos li h1 {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.campos > li > label + *,
+.interno {
+  flex: 1 0 220px;
+}
+
+.botonesForm {
+  padding: 10px;
+  margin: 10px;
+}
+
+/* INICIA CAJA PARA PUBLICIDAD */
+#publicidad {
+  border: 2px solid #a59c58;
+  border-radius: 10%;
+  width: auto;
+  max-width: 180px;
+  height: 300px;
+  margin: 10px;
+  text-align: center;
+  background: linear-gradient(#CB997E, #efdace);
+  box-shadow: 10px 10px 5px #686868;
+}
+#publicidad p, #publicidad .titulo h1, .titulo #publicidad h1 {
+  padding: 4px;
+  text-align: center;
+  background: linear-gradient(navajowhite, white);
+  border-radius: 15%;
+  margin: 5px;
+}
+
+/* FINALIZA CAJA PARA PUBLICIDAD */
+/* INICIA TIENDA  */
+.tienda {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.producto {
+  width: 200px;
+  height: 330px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #F0EFEB;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.producto p, .producto .titulo h1, .titulo .producto h1 {
+  background-color: #B7B7A4;
+}
+.producto .producto--prod1 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda1.jpg);
+}
+.producto .producto--prod1:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod2 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda2.jpg);
+}
+.producto .producto--prod2:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod3 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda3.jpg);
+}
+.producto .producto--prod3:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod4 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda4.jpg);
+}
+.producto .producto--prod4:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod5 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda5.jpg);
+}
+.producto .producto--prod5:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod6 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda6.jpg);
+}
+.producto .producto--prod6:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod7 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda7.jpg);
+}
+.producto .producto--prod7:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod8 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda8.jpg);
+}
+.producto .producto--prod8:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod9 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda9.jpg);
+}
+.producto .producto--prod9:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod10 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda10.jpg);
+}
+.producto .producto--prod10:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod11 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda11.jpg);
+}
+.producto .producto--prod11:hover {
+  animation: mueve 1s infinite;
+}
+.producto .producto--prod12 {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px silver;
+  background-image: url(../img/tienda12.jpg);
+}
+.producto .producto--prod12:hover {
+  animation: mueve 1s infinite;
+}
+
+/* FINALIZA TIENDA  */
+/* INICIA SERVICIOS  */
+.contenedor {
+  display: grid;
+  grid-template-areas: "servicio1 servicio1 servicio1" "serv1 serv2 serv3" "servicio2 servicio2 servicio2" "serv4 serv5 serv6" "servicio3 servicio3 servicio3" "serv7 serv8 serv9";
+  grid-template-rows: 50px 190px 50px 190px 50px 190px;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: auto;
+  height: auto;
+  grid-gap: 5px;
+  justify-content: center;
+  padding: 30px;
+  margin: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #B7B7A4;
+  box-shadow: 5px 5px 5px;
+}
+
+.servicio {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 150px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.servicio1 {
+  grid-area: servicio1;
+  background-color: #A5A58D;
+  text-align: center;
+  line-height: center;
+}
+
+.servicio2 {
+  grid-area: servicio2;
+  background-color: #A5A58D;
+  text-align: center;
+  line-height: center;
+}
+
+.servicio3 {
+  grid-area: servicio3;
+  background-color: #A5A58D;
+  text-align: center;
+  line-height: center;
+}
+
+.serv1 {
+  grid-area: serv1;
+  background-image: url(../img/servicio1.jpg);
+  align-items: center;
+}
+.serv1:hover {
+  animation: mueve 1s infinite;
+}
+
+.serv2 {
+  grid-area: serv2;
+  background-image: url(../img/servicio2.jpg);
+  align-items: center;
+}
+.serv2:hover {
+  animation: mueve 1s infinite;
+}
+
+.serv3 {
+  grid-area: serv3;
+  background-image: url(../img/servicio3.jpg);
+  align-items: center;
+}
+.serv3:hover {
+  animation: mueve 1s infinite;
+}
+
+.serv4 {
+  grid-area: serv4;
+  background-image: url(../img/servicio4.jpg);
+  align-items: center;
+}
+.serv4:hover {
+  animation: mueve 1s infinite;
+}
+
+.serv5 {
+  grid-area: serv5;
+  background-image: url(../img/servicio5.jpg);
+  align-items: center;
+}
+.serv5:hover {
+  animation: mueve 1s infinite;
+}
+
+.serv6 {
+  grid-area: serv6;
+  background-image: url(../img/servicio6.jpg);
+  align-items: center;
+}
+.serv6:hover {
+  animation: mueve 1s infinite;
+}
+
+.serv7 {
+  grid-area: serv7;
+  background-image: url(../img/servicio7.jpg);
+  align-items: center;
+}
+.serv7:hover {
+  animation: mueve 1s infinite;
+}
+
+.serv8 {
+  grid-area: serv8;
+  background-image: url(../img/servicio8.jpg);
+  align-items: center;
+}
+.serv8:hover {
+  animation: mueve 1s infinite;
+}
+
+.serv9 {
+  grid-area: serv9;
+  background-image: url(../img/servicio9.jpg);
+  align-items: center;
+}
+.serv9:hover {
+  animation: mueve 1s infinite;
+}
+
+#totalDelCarrito {
+  margin-left: 10px;
+}
+
+@keyframes mueve {
+  0% {
+    transform: translate(5px);
+    transform: escale(0.99);
+    box-shadow: -2px -2px 1px #222;
+    border: 1px solid black;
+  }
+  50% {
+    transform: translate(10px);
+    transform: escale(1.2);
+    box-shadow: -5px -5px 2px #222;
+    border: 2px solid black;
+  }
+  100% {
+    transform: translate(5px);
+    transform: escale(0.99);
+    box-shadow: -2px -2px 1px #222;
+    border: 1px solid black;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .contenedor {
+    display: grid;
+    grid-template-areas: "servicio1 servicio1" "serv1 serv2" "serv3 serv3" "servicio2 servicio2" "serv4 serv5" "serv6 serv6" "servicio3 servicio3" "serv7 serv8" "serv9 serv9";
+    grid-template-rows: 50px 190px 190px 50px 190px 190px 50px 190px 190px;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    height: auto;
+    grid-gap: 5px;
+    padding: 30px;
+    margin: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #B7B7A4;
+    box-shadow: 5px 5px 5px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .contenedor {
+    display: grid;
+    grid-template-areas: "servicio1" "serv1" "serv2" "serv3" "servicio2" "serv4" "serv5" "serv6" "servicio3" "serv7" "serv8" "serv9";
+    grid-template-rows: 70px 190px 190px 185px 50px 190px 190px 190px 50px 190px 190px 190px;
+    grid-template-columns: 1fr;
+    width: 85%;
+    height: auto;
+    grid-gap: 5px;
+    padding: 30px;
+    margin: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #B7B7A4;
+    box-shadow: 5px 5px 5px;
+    justify-content: center;
+    text-align: center;
+  }
+}
+/* FINALIZA SERVICIOS  */
+
+/*# sourceMappingURL=style.css.map */
